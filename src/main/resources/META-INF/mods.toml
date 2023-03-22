@@ -1,0 +1,14 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT"
+
+[[mods]]
+modId="underwaterplacement"
+version="1.0"
+displayName="Underwater Placement"
+logoFile="examplemod.png"
+credits="Eu mesmo"
+authors="TenhoNomeDegaz"
+description='''
+A mod to implement underwater decorations and functionality
+'''

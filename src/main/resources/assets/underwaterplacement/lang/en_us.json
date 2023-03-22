@@ -1,0 +1,20 @@
+{
+  "item.underwaterplacement.example_item": "Example Item",
+  "item.underwaterplacement.example_item2": "Example Item 2",
+  "block.underwaterplacement.example_block": "Example Block",
+  "block.underwaterplacement.example_block2": "Example Block2",
+  "block.underwaterplacement.prismarsteel_grindstone": "Prismarsteel Grindstone",
+  "itemGroup.underwaterplacement": "Underwater Placement",
+  "item.underwaterplacement.example_food": "Example Food",
+  "item.underwaterplacement.example_sword": "Example Sword",
+  "item.underwaterplacement.example_pickaxe": "Example Pickaxe",
+  "item.underwaterplacement.example_shovel": "Example Shovel",
+  "item.underwaterplacement.example_axe": "Example Axe",
+  "item.underwaterplacement.example_hoe": "Example Hoe",
+  "item.underwaterplacement.example_helmet": "Example Helmet",
+  "item.underwaterplacement.example_chestplate": "Example Chestplate",
+  "item.underwaterplacement.example_leggings": "Example Leggings",
+  "item.underwaterplacement.example_boots": "Example Boots",
+  "block.underwaterplacement.example_flower": "Example Flower",
+  "block.underwaterplacement.example_flower_pot": "Potted Example Flower"
+}

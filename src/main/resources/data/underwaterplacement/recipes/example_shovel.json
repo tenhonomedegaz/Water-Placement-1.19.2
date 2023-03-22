@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_shovel"
+  },
+  "addition": {
+    "item": "underwaterplacement:example_item2"
+  },
+  "result": {
+    "item": "underwaterplacement:example_shovel"
+  }
+}
