@@ -1,21 +1,16 @@
 package io.github.tenhonomedegaz.underwaterplacement.init;
 
-import com.mojang.datafixers.types.templates.Tag;
 import io.github.tenhonomedegaz.underwaterplacement.UnderwaterPlacement;
-import io.github.tenhonomedegaz.underwaterplacement.blocks.CustomModelBlock;
 import io.github.tenhonomedegaz.underwaterplacement.blocks.WaterLoggedGrindstone;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
