@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "underwaterplacement:block/damaged_prismarsteel_anvil",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "underwaterplacement:block/damaged_prismarsteel_anvil",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "underwaterplacement:block/damaged_prismarsteel_anvil"
+    },
+    "facing=west": {
+      "model": "underwaterplacement:block/damaged_prismarsteel_anvil",
+      "y": 90
+    }
+  }
+}

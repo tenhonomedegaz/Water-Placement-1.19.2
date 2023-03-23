@@ -1,6 +1,7 @@
 package io.github.tenhonomedegaz.underwaterplacement.blocks;
 
 
+import io.github.tenhonomedegaz.underwaterplacement.menus.PrismarsteelGrindstoneMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -11,7 +12,6 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.GrindstoneMenu;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -86,9 +86,10 @@ public class WaterLoggedGrindstone extends GrindstoneBlock implements SimpleWate
             return InteractionResult.CONSUME;
         }
     }
+
     public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos){
         return new SimpleMenuProvider((p1, p2, p3) ->{
-            return new GrindstoneMenu(p1, p2, ContainerLevelAccess.create(level, pos));
+            return new PrismarsteelGrindstoneMenu(p1, p2, ContainerLevelAccess.create(level, pos));
         }, CONTAINER_TITLE);
     }
 }

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "underwaterplacement:prismarsteel_anvil",
+    "underwaterplacement:chipped_prismarsteel_anvil",
+    "underwaterplacement:damaged_prismarsteel_anvil"
+  ]
+}

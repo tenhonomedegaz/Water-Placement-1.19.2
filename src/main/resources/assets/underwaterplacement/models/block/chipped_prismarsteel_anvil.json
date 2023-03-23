@@ -1,0 +1,6 @@
+{
+  "parent": "underwaterplacement:block/template_prismarsteel_anvil",
+  "textures": {
+    "top": "underwaterplacement:blocks/chipped_prismarsteel_anvil_top"
+  }
+}
