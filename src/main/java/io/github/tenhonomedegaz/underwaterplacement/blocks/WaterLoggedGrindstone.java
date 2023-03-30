@@ -1,34 +1,43 @@
 package io.github.tenhonomedegaz.underwaterplacement.blocks;
 
 
-import io.github.tenhonomedegaz.underwaterplacement.menus.PrismarsteelGrindstoneMenu;
+import io.github.tenhonomedegaz.underwaterplacement.menus.MarineGrindstoneMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.stats.Stats;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.GrindstoneBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.LecternBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 
+import javax.annotation.Nullable;
+
 public class WaterLoggedGrindstone extends GrindstoneBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+
     private static final Component CONTAINER_TITLE = Component.translatable("container.grindstone_title");
 
     public WaterLoggedGrindstone(Properties properties) {
@@ -87,11 +96,6 @@ public class WaterLoggedGrindstone extends GrindstoneBlock implements SimpleWate
         }
     }
 
-    public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos){
-        return new SimpleMenuProvider((p1, p2, p3) ->{
-            return new PrismarsteelGrindstoneMenu(p1, p2, ContainerLevelAccess.create(level, pos));
-        }, CONTAINER_TITLE);
-    }
 }
 
 

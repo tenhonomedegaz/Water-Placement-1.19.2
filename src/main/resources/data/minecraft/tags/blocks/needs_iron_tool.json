@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "underwaterplacement:aquamarine_ore",
+    "underwaterplacement:aquamarine_block",
+    "underwaterplacement:marine_anvil",
+    "underwaterplacement:marine_enchanting_table"
+  ]
+}

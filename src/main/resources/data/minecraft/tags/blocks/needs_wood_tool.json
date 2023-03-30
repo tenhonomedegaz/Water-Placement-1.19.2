@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "underwaterplacement:example_block",
-    "underwaterplacement:example_block2",
-    "underwaterplacement:prismarsteel_grindstone"
+    "underwaterplacement:marine_grindstone"
   ]
 }

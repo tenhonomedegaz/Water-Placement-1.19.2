@@ -13,7 +13,7 @@ public class ModCommonEvents {
     @SubscribeEvent
     public static void commomSetup(FMLCommonSetupEvent event){
         event.enqueueWork(()->{
-            ((FlowerPotBlock)(Blocks.FLOWER_POT)).addPlant(BlockInit.EXAMPLE_FLOWER.getId(), BlockInit.EXAMPLE_FLOWER_POT);
+            ((FlowerPotBlock)(Blocks.FLOWER_POT)).addPlant(BlockInit.MARINE_HYDRANGEA.getId(), BlockInit.POTTED_MARINE_HYDRANGEA);
         });
     }
 }

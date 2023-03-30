@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "underwaterplacement:block/marine_stonecutter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "underwaterplacement:block/marine_stonecutter"
+    },
+    "facing=south": {
+      "model": "underwaterplacement:block/marine_stonecutter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "underwaterplacement:block/marine_stonecutter",
+      "y": 270
+    }
+  }
+}

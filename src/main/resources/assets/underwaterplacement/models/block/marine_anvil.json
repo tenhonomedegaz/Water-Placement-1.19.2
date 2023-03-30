@@ -1,0 +1,6 @@
+{
+  "parent": "underwaterplacement:block/template_marine_anvil",
+  "textures": {
+    "top": "underwaterplacement:blocks/marine_anvil_top"
+  }
+}

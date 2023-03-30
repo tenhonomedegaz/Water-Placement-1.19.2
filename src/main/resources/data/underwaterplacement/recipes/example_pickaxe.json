@@ -4,7 +4,7 @@
     "item": "minecraft:iron_pickaxe"
   },
   "addition": {
-    "item": "underwaterplacement:example_item2"
+    "item": "underwaterplacement:prismarsteel_ingot"
   },
   "result": {
     "item": "underwaterplacement:example_pickaxe"

@@ -1,8 +1,9 @@
 {
   "replace": false,
   "values": [
-    "underwaterplacement:example_block",
-    "underwaterplacement:example_block2",
-    "underwaterplacement:prismarsteel_grindstone"
+    "underwaterplacement:aquamarine_block",
+    "underwaterplacement:prismarsteel_grindstone",
+    "underwaterplacement:prismarsteel_anvil",
+    "underwaterplacement:prismarsteel_enchanting_table"
   ]
 }

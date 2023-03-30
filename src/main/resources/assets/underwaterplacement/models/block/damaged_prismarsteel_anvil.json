@@ -1,6 +1,0 @@
-{
-  "parent": "underwaterplacement:block/template_prismarsteel_anvil",
-  "textures": {
-    "top": "underwaterplacement:blocks/damaged_prismarsteel_anvil_top"
-  }
-}

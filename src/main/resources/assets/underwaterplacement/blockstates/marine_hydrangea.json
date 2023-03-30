@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "underwaterplacement:block/marine_hydrangea",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "underwaterplacement:block/marine_hydrangea",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "underwaterplacement:block/marine_hydrangea",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "underwaterplacement:block/marine_hydrangea",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "underwaterplacement:block/marine_hydrangea"
+    },
+    "facing=west": {
+      "model": "underwaterplacement:block/marine_hydrangea",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
