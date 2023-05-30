@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_ocean",
+  "features": "underwaterplacement:luminescent_mangrove_placed",
+  "step": "vegetal_decoration"
+}

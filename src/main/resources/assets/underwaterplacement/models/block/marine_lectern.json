@@ -9,8 +9,8 @@
     },
     "textures": {
         "particle": "underwaterplacement:blocks/marine_lectern_sides",
-	"headbottom": "minecraft:block/prismarine_bricks",
-        "bottom": "minecraft:block/prismarine",
+	"headbottom": "underwaterplacement:blocks/marine_lectern_headbottom",
+        "bottom": "underwaterplacement:blocks/marine_lectern_bottom",
         "base": "underwaterplacement:blocks/marine_lectern_base",
         "front": "underwaterplacement:blocks/marine_lectern_front",
         "sides": "underwaterplacement:blocks/marine_lectern_sides",

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "underwaterplacement:blocks/soil_sand"
+  }
+}

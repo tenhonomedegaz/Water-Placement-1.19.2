@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gravel",
+    "underwaterplacement:gravelled_luminescent_roots",
+    "underwaterplacement:luminescent_carpet",
+    "underwaterplacement:luminescent_mangrove_log",
+    "underwaterplacement:luminescent_mangrove_leaves",
+    "minecraft:vine",
+    "underwaterplacement:marine_hydrangea",
+    "minecraft:snow"
+  ]
+}

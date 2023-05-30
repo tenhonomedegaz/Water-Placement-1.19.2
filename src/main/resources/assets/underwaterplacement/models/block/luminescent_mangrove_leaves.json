@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "underwaterplacement:blocks/luminescent_mangrove_leaves"
+  }
+}

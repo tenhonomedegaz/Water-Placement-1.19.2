@@ -4,7 +4,6 @@ import io.github.tenhonomedegaz.underwaterplacement.UnderwaterPlacement;
 import io.github.tenhonomedegaz.underwaterplacement.base.ModArmorMaterial;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,13 +12,16 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemInit {
+    private static final Item.Properties props(){
+        return new Item.Properties().tab(UnderwaterPlacement.TAB);
+    }
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, UnderwaterPlacement.MODID);
 
     public static final RegistryObject<Item> AQUAMARINE = ITEMS.register("aquamarine",
@@ -58,9 +60,7 @@ public class ItemInit {
     public static final RegistryObject<ArmorItem> EXAMPLE_BOOTS = ITEMS.register("example_boots",
             () -> new ArmorItem(ArmorTiers.PRISMARSTEEL, EquipmentSlot.FEET, props()));
 
-    private static final Item.Properties props(){
-        return new Item.Properties().tab(UnderwaterPlacement.TAB);
-    }
+
 
     public static class Foods {
         public static final FoodProperties WATER_MELON = new FoodProperties.Builder()

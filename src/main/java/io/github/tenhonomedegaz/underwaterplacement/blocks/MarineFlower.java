@@ -81,15 +81,11 @@ public class MarineFlower extends FlowerBlock implements SimpleWaterloggedBlock 
         }
     }
 
-    protected boolean mayPlaceOn(BlockState blockState, BlockGetter p_51043_, BlockPos p_51044_) {
-        return blockState.is(BlockTags.DIRT) || blockState.is(Blocks.FARMLAND) || blockState.is(Blocks.SAND) || blockState.is(BlockTags.BASE_STONE_OVERWORLD) || blockState.is(Blocks.GRAVEL) || blockState.is(BlockInit.AQUAMARINE_ORE.get()) || blockState.is(BlockInit.AQUAMARINE_BLOCK.get()) ;
-    }
-
 
     public boolean canSurvive(BlockState blockState, LevelReader reader, BlockPos blockPos) {
         Direction direction = blockState.getValue(FACING);
         BlockPos blockpos = blockPos.relative(direction.getOpposite());
-        return reader.getBlockState(blockpos).isFaceSturdy(reader, blockpos, direction);
+        return (reader.getBlockState(blockpos).isFaceSturdy(reader, blockpos, direction) || reader.getBlockState(blockpos).is(BlockInit.LUMINESCENT_MANGROVE_LEAVES.get()) || reader.getBlockState(blockpos).is(BlockInit.LUMINESCENT_MANGROVE_ROOTS.get()));
     }
 
     public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState1, LevelAccessor accessor, BlockPos blockPos, BlockPos pos) {

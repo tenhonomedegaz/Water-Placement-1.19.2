@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "underwaterplacement:luminescent_mangrove_log",
+    "underwaterplacement:luminescent_mangrove_wood",
+    "underwaterplacement:stripped_luminescent_mangrove_log",
+    "underwaterplacement:stripped_luminescent_mangrove_wood"
+  ]
+}

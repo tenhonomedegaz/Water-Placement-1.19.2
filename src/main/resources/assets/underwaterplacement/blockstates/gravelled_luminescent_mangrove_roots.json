@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "underwaterplacement:block/gravelled_luminescent_mangrove_roots",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "underwaterplacement:block/gravelled_luminescent_mangrove_roots"
+    },
+    "axis=z": {
+      "model": "underwaterplacement:block/gravelled_luminescent_mangrove_roots",
+      "x": 90
+    }
+  }
+}

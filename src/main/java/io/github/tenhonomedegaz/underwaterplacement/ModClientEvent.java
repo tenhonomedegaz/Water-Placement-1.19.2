@@ -2,6 +2,7 @@ package io.github.tenhonomedegaz.underwaterplacement;
 
 import io.github.tenhonomedegaz.underwaterplacement.blocks.entity.ModBlockEntities;
 import io.github.tenhonomedegaz.underwaterplacement.blocks.entity.renderer.WaterloggedEnchantingTableBlockEntityRenderer;
+import io.github.tenhonomedegaz.underwaterplacement.blocks.entity.renderer.WaterloggedLecternRenderer;
 import io.github.tenhonomedegaz.underwaterplacement.init.BlockInit;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -24,6 +25,7 @@ public class ModClientEvent {
     public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event){
         event.registerBlockEntityRenderer(ModBlockEntities.MARINE_ENCHANTING_TABLE.get(),
                 WaterloggedEnchantingTableBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.MARINE_LECTERN.get(),
+                WaterloggedLecternRenderer::new);
     }
-
 }

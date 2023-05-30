@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "underwaterplacement:blocks/gravelled_luminescent_mangrove_roots_top",
+    "side": "underwaterplacement:blocks/gravelled_luminescent_mangrove_roots_side"
+  }
+}

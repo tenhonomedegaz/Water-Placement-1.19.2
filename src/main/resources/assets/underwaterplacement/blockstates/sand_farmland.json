@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "moisture=0": {
+      "model": "underwaterplacement:block/sand_farmland0"
+    },
+    "moisture=1": {
+      "model": "underwaterplacement:block/sand_farmland1"
+    },
+    "moisture=2": {
+      "model": "underwaterplacement:block/sand_farmland2"
+    },
+    "moisture=3": {
+      "model": "underwaterplacement:block/sand_farmland3"
+    },
+    "moisture=4": {
+      "model": "underwaterplacement:block/sand_farmland4"
+    },
+    "moisture=5": {
+      "model": "underwaterplacement:block/sand_farmland5"
+    },
+    "moisture=6": {
+      "model": "underwaterplacement:block/sand_farmland6"
+    },
+    "moisture=7": {
+      "model": "underwaterplacement:block/sand_farmland7"
+    }
+  }
+}

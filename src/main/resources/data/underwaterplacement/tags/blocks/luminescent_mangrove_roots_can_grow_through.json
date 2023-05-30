@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gravel",
+    "underwaterplacement:gravelled_luminescent_roots",
+    "underwaterplacement:luminescent_carpet",
+    "minecraft:vine",
+    "underwaterplacement:marine_hydrangea",
+    "minecraft:snow"
+  ]
+}

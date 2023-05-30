@@ -20,6 +20,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("marine_brewing_stand", ()->
                     BlockEntityType.Builder.of(WaterloggedBrewingStandBlockEntity::new,
                             BlockInit.MARINE_BREWING_STAND.get()).build(null));
+    public static final RegistryObject<BlockEntityType<WaterloggedLecternBlockEntity>> MARINE_LECTERN =
+            BLOCK_ENTITIES.register("marine_lectern", ()->
+                    BlockEntityType.Builder.of(WaterloggedLecternBlockEntity::new,
+                            BlockInit.MARINE_LECTERN.get()).build(null));
 
 
     public static void register(IEventBus bus){
