@@ -1,28 +1,28 @@
 {
   "variants": {
     "moisture=0": {
-      "model": "underwaterplacement:block/sand_farmland0"
+      "model": "underwaterplacement:block/sand_farmland"
     },
     "moisture=1": {
-      "model": "underwaterplacement:block/sand_farmland1"
+      "model": "underwaterplacement:block/sand_farmland"
     },
     "moisture=2": {
-      "model": "underwaterplacement:block/sand_farmland2"
+      "model": "underwaterplacement:block/sand_farmland"
     },
     "moisture=3": {
-      "model": "underwaterplacement:block/sand_farmland3"
+      "model": "underwaterplacement:block/sand_farmland"
     },
     "moisture=4": {
-      "model": "underwaterplacement:block/sand_farmland4"
+      "model": "underwaterplacement:block/sand_farmland"
     },
     "moisture=5": {
-      "model": "underwaterplacement:block/sand_farmland5"
+      "model": "underwaterplacement:block/sand_farmland"
     },
     "moisture=6": {
-      "model": "underwaterplacement:block/sand_farmland6"
+      "model": "underwaterplacement:block/sand_farmland"
     },
     "moisture=7": {
-      "model": "underwaterplacement:block/sand_farmland7"
+      "model": "underwaterplacement:block/sand_farmland_moist"
     }
   }
 }

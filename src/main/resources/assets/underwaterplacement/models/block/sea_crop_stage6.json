@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "texture": "underwaterplacement:blocks/sea_crop_stage6"
+  }
+}

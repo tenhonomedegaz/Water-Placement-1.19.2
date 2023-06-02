@@ -1,7 +1,0 @@
-{
-  "parent": "underwaterplacement:block/template_sand_farmland",
-  "textures": {
-    "sand": "underwaterplacement:blocks/soil_sand",
-    "top": "underwaterplacement:blocks/sand_farmland7"
-  }
-}

@@ -27,7 +27,6 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.common.FarmlandWaterManager;
 import net.minecraftforge.common.IPlantable;
 import org.jetbrains.annotations.NotNull;
 
@@ -39,7 +38,7 @@ public class SandFarmland extends Block implements SimpleWaterloggedBlock {
 
     public SandFarmland(BlockBehaviour.Properties p_53247_) {
         super(p_53247_);
-        this.registerDefaultState(this.stateDefinition.any().setValue(MOISTURE, Integer.valueOf(5)).setValue(WATERLOGGED, Boolean.valueOf(true)));
+        this.registerDefaultState(this.stateDefinition.any().setValue(MOISTURE, Integer.valueOf(0)).setValue(WATERLOGGED, Boolean.valueOf(true)));
     }
 
     public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState1, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos1) {
@@ -80,14 +79,23 @@ public class SandFarmland extends Block implements SimpleWaterloggedBlock {
 
     public void randomTick(@NotNull BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
         int i = blockState.getValue(MOISTURE);
-        if (blockState.getValue(WATERLOGGED) == Boolean.valueOf(false)) {
+        if (!isNearWater(serverLevel, blockPos) && !serverLevel.isRainingAt(blockPos.above()) && blockState.getValue(WATERLOGGED) == Boolean.valueOf(false)) {
             if (i > 0) {
                 serverLevel.setBlock(blockPos, blockState.setValue(MOISTURE, Integer.valueOf(i - 1)), 2);
-            } else if (!isUnderCrops(serverLevel, blockPos)) {
+            } else if (!isUnderCrops(serverLevel, blockPos) && !blockPos.above().equals(Fluids.WATER)) {
                 turnToSoilSand(blockState, serverLevel, blockPos);
             }
-        } else if (blockState.getValue(WATERLOGGED) == Boolean.valueOf(true)) {
-            serverLevel.setBlock(blockPos, blockState.setValue(MOISTURE, Integer.valueOf(7)), 2);
+        } else if (i < 7) {
+            serverLevel.setBlock(blockPos, blockState.setValue(MOISTURE, Integer.valueOf(7)).setValue(WATERLOGGED, Boolean.valueOf(true)), 2);
+        }if (i == 7){
+            if (blockState.getValue(WATERLOGGED) == Boolean.valueOf(false)) {
+                if(isNearWater(serverLevel, blockPos)){
+                    serverLevel.setBlock(blockPos, blockState.setValue(WATERLOGGED, Boolean.valueOf(true)), 2);
+                }
+                if(serverLevel.isRainingAt(blockPos.above())){
+                    serverLevel.setBlock(blockPos, blockState.setValue(WATERLOGGED, Boolean.valueOf(true)), 2);
+                }
+            }
         }
 
     }
@@ -96,6 +104,18 @@ public class SandFarmland extends Block implements SimpleWaterloggedBlock {
     public static void turnToSoilSand(BlockState blockState, Level level, BlockPos blockPos) {
         level.setBlockAndUpdate(blockPos, pushEntitiesUp(blockState, BlockInit.SOIL_SAND.get().defaultBlockState(), level, blockPos));
     }
+
+    private static boolean isNearWater(LevelReader levelReader, BlockPos blockPos) {
+        BlockState state = levelReader.getBlockState(blockPos);
+        for(BlockPos blockpos : BlockPos.betweenClosed(blockPos.offset(-4, 0, -4), blockPos.offset(4, 1, 4))) {
+            if (state.canBeHydrated(levelReader, blockPos, levelReader.getFluidState(blockpos), blockpos)) {
+                return true;
+            }
+        }
+
+        return net.minecraftforge.common.FarmlandWaterManager.hasBlockWaterTicket(levelReader, blockPos);
+    }
+
 
 
     public void fallOn(Level level, BlockState blockState, BlockPos blockPos, Entity entity, float v) {

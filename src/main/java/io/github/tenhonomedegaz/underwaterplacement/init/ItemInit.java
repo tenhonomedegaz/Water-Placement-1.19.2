@@ -36,6 +36,9 @@ public class ItemInit {
             () -> new Item(props()));
     public static final RegistryObject<Item> PRISMARSTEEL_INGOT = ITEMS.register("prismarsteel_ingot",
             () -> new Item(props()));
+    public static  final  RegistryObject<Item> SEA_SEEDS = ITEMS.register("sea_seeds",
+            () -> new ItemNameBlockItem(BlockInit.SEA_CROP.get(),
+                    props()));
     public static  final  RegistryObject<Item> WATER_MELON = ITEMS.register("water_melon",
             () -> new Item(props().food(Foods.WATER_MELON)));
     public static  final  RegistryObject<Item> PRISMATIC_WATER_MELON = ITEMS.register("prismatic_water_melon",

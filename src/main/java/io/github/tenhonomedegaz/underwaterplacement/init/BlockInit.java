@@ -3,6 +3,7 @@ package io.github.tenhonomedegaz.underwaterplacement.init;
 import io.github.tenhonomedegaz.underwaterplacement.UnderwaterPlacement;
 import io.github.tenhonomedegaz.underwaterplacement.blocks.*;
 import io.github.tenhonomedegaz.underwaterplacement.blocks.WaterloggedBrewingStand;
+import io.github.tenhonomedegaz.underwaterplacement.blocks.crops.SeaSeedCropBlock;
 import io.github.tenhonomedegaz.underwaterplacement.blocks.tree.AquaticTreeBlock;
 import io.github.tenhonomedegaz.underwaterplacement.blocks.tree.LuminescentMangroveRootsBlock;
 import io.github.tenhonomedegaz.underwaterplacement.blocks.tree.WaterloggedSapling;
@@ -76,9 +77,8 @@ public class BlockInit {
     public static final RegistryObject<Block> SOIL_SAND = register("soil_sand",
             () -> new SoilSand(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).strength(0.5F).sound(SoundType.SAND)),
             new Item.Properties().tab(UnderwaterPlacement.TAB));
-    public static final RegistryObject<Block> SAND_FARMLAND = register("sand_farmland",
-            () -> new SandFarmland(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).strength(0.5F).sound(SoundType.SAND).isViewBlocking(BlockInit::always).isSuffocating(BlockInit::always)),
-            new Item.Properties().tab(UnderwaterPlacement.TAB));
+    public static final RegistryObject<Block> SAND_FARMLAND = BLOCKS.register("sand_farmland",
+            () -> new SandFarmland(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).strength(0.5F).sound(SoundType.SAND).randomTicks().isViewBlocking(BlockInit::always).isSuffocating(BlockInit::always)));
 
     public static final RegistryObject<Block> LUMINESCENT_MANGROVE_LOG = register("luminescent_mangrove_log",
             ()-> new AquaticTreeBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_LOG).lightLevel(lightLevel1)),
@@ -114,6 +114,8 @@ public class BlockInit {
             new Item.Properties().tab(UnderwaterPlacement.TAB));
     public static final RegistryObject<FlowerPotBlock> POTTED_MARINE_HYDRANGEA = BLOCKS.register("potted_marine_hydrangea",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, BlockInit.MARINE_HYDRANGEA, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).lightLevel(lightLevel10)));
+    public static final RegistryObject<SeaSeedCropBlock> SEA_CROP = BLOCKS.register("sea_crop",
+            () -> new SeaSeedCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier, Item.Properties properties) {

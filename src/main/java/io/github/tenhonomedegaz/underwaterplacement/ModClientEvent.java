@@ -19,6 +19,7 @@ public class ModClientEvent {
     public static void clientSetup(FMLClientSetupEvent event){
         ItemBlockRenderTypes.setRenderLayer(BlockInit.MARINE_HYDRANGEA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.POTTED_MARINE_HYDRANGEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.SEA_CROP.get(), RenderType.cutout());
 
     }
     @SubscribeEvent
